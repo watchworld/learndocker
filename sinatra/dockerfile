@@ -1,0 +1,5 @@
+#创建docker image 每行是一条指令
+FROM ubuntu:latest
+MAINTAINER wanggz
+RUN apt-get update && apt-get install -y ruby ruby-dev
+RUN gem install sinatra
