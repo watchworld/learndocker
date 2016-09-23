@@ -1,2 +1,20 @@
-1、停止所有运行的容器，删除容器和镜像 docker kill $(docker ps -q) ; docker rm $(docker ps -a -q) ; docker rmi $(docker images -q -a) 
-2、UDN社区 开源文档分类导航 http://udn.yyuap.com/doc/
+3、UDN社区 开源文档分类导航 http://udn.yyuap.com/doc/
+-------------------------------------------------------------------------------------------------------------------------
+1、停止所有运行的容器，删除容器和镜像 docker kill $(docker ps -q) ; docker rm $(docker ps -a -q) ; docker rmi $(docker images -q -a)  
+2、查看容器端口 docker port container_id 映射端口 -p -P选项
+3、列出当前网络 docker network ls
+4、docker machine用来进行docker的推送安装，可以在许多driver上安装部署docker 
+5、daocloud.io 国内docker hub镜像 下载速度较快
+6、docker image 显示镜像
+7、docker inspect container_id 显示镜像详细信息 -f 显示具体一项的内容
+8、docker search 搜索远程仓库镜像信息 -s 显示收藏次数条件
+9、docker rmi 删除镜像 docker rm 删除容器 -f 强制删除
+10、docker -commit -m -a container_id newname 也可以基于模块导入 导入工具OpenVZ
+11、docker create start 创建启动容器 docker attach |exec nsenter工具 进入运行的容器里
+12、docker run -v -v创建数据卷多次使用-v可以创建多个卷 --volume-from 挂载数据容器
+13、docker --link 容器互联
+
+--------------------------------------------------------------------------------------------------------------------------------
+Busybox unix工具集
+创建带SSH服务的镜像
+docker seach ubuntu ->docker pull ubuntu->docker run -it ubuntu:lastest->安装ssh
