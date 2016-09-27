@@ -1,0 +1,2 @@
+1、如何批量清理临时docker镜像文件 
+sduo docker images rmi $(sudo docker images -q -f dangling=true)
