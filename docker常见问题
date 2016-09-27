@@ -1,2 +1,21 @@
 1、如何批量清理临时docker镜像文件 
 sduo docker images rmi $(sudo docker images -q -f dangling=true)
+sudo doker rm $(sudo docker ps -a)
+2、如何查看镜像支持的环境变量
+sduo docker run IMAGE env
+3、docke5r本地镜像文件都放在那里
+放/var/lib/docker，container放容器 graph放镜像信息 auts 放镜像层文件
+4、构建docker的建议
+选取小的基础镜像，清理缓存文件和安装包，安装软件避免引入不需要的库，尽量使用系统库，使用dockerfile形式创建，使用.dockeringorefile过滤不必要的文件
+5、停止所有正在运行
+sudo docker kill $(sudo docker ps -q)
+6、清理停止容器
+sudo docker rm $(sudo docker ps -a -q)
+7、如何给容器一个固定IP地址，不然容器重启会重新分配
+使用pipwork工具
+8、查看容器运行日志
+docker logs container_id | container_name
+9、端口映射，在dockerfile里面要expose端口 启动时候指定publicallport=true
+10、容器指定使用限额 
+docker create | docker run 指定 -c (cpu) -m(memory)
+11、ubuntu配置文件 /etc/default/docker centos /etc/sysconfig/docker
