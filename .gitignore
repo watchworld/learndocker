@@ -1,0 +1,4 @@
+#忽略文件夹
+/.git/
+/tomcat8.0_jdk1.8/apache-tomcat-8.0.36/
+/tomcat8.0_jdk1.8/jdk1.8.0_101/
